@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "710210914921",
+    "firebase_url": "https://blood-bank-2020.firebaseio.com",
+    "project_id": "blood-bank-2020",
+    "storage_bucket": "blood-bank-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710210914921:android:5956c7de6bff4c8ba270f8",
+        "android_client_info": {
+          "package_name": "com.example.donatorapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710210914921-hsri5s3o97bk013s9e9p9ge4m9pf55h5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.donatorapp",
+            "certificate_hash": "2547a4b9d037a40c4e4e527fd5a4ec6764c28524"
+          }
+        },
+        {
+          "client_id": "710210914921-oc4dt4d4s4oatsn92iafruras3270t6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5s5YQ7evnY5PGKwX3TMxVWRgk5PoFW34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710210914921-oc4dt4d4s4oatsn92iafruras3270t6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

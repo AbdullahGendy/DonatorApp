@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30_height" />
+
+                    <com.example.donatorapp.Utills.MyTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="My Profile"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_19ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30_height" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/address_item_height"
+                        android:layout_gravity="center"
+                        android:src="@drawable/images"
+                        app:civ_border_color="@color/colorPrimaryDark"
+                        app:civ_border_width="@dimen/_2sdp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_10_height" />
+
+
+                    <com.example.donatorapp.Utills.MyTextViewBold
+                        android:id="@+id/text_view_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_10_height" />
+
+                    <com.example.donatorapp.Utills.MyTextViewBold
+                        android:id="@+id/text_view_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_points"
+                        android:padding="@dimen/_6sdp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30_height" />
+
+
+                    <!--1st -->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp_height"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal" />
+                    <!--1-->
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/favourite_item_height"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/phone_number_icon"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:gravity="bottom"
+                                android:text="Phone Number"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:id="@+id/text_view_phone_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:padding="0dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wqd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp_height"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal" />
+
+
+                    <!--2-->
+                    <LinearLayout
+                        android:id="@+id/jdsafa"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/favourite_item_height"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/address_icon"
+
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:gravity="bottom"
+                                android:text="Address"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:id="@+id/text_view_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:padding="0dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hdds"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp_height"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <!--3-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/favourite_item_height"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/bod_icon"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:gravity="bottom"
+                                android:text="Date of Birth"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:id="@+id/text_view_date_of_birth"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:maxLines="1"
+                                android:padding="0dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp_height"
+                        android:background="@color/colorPrimaryDark"
+                        tools:ignore="Orientation" />
+
+                    <LinearLayout
+                        android:id="@+id/jjhd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/favourite_item_height"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/bod_icon"
+                            android:tint="@color/colorPrimaryDark" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8.5"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:gravity="bottom"
+                                android:text="Blood Type"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/_11ssp" />
+
+                            <com.example.donatorapp.Utills.MyTextViewBold
+                                android:id="@+id/text_view_blood_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".5"
+                                android:background="@android:color/transparent"
+                                android:gravity="center_vertical"
+                                android:hint=""
+                                android:maxLines="1"
+                                android:padding="0dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/black"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1dp_height"
+                        android:background="@color/colorPrimaryDark"
+                        tools:ignore="Orientation" />
+
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

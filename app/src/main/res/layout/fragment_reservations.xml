@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/card_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/_20_height"
+        android:layout_marginTop="@dimen/_20_height"
+        android:layout_marginEnd="@dimen/_20_height"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20_height">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/destination_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_4_height"
+                android:gravity="center"
+                android:padding="@dimen/_4_height"
+                android:text=""
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/distance_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_4_height"
+                android:drawablePadding="@dimen/_4_height"
+                android:gravity="center"
+                android:text=""
+                android:textSize="@dimen/_12ssp" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</FrameLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+    <com.example.donatorapp.Utills.MyTextViewBold
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="Reservations"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+
+        android:textSize="@dimen/_17ssp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+    <com.example.donatorapp.Utills.MyTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/_10sdp"
+        android:text="Pick The Day:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_11ssp" />
+
+
+    <Spinner
+        android:id="@+id/spinner_Day"
+        style="@style/spinner_style"
+        android:entries="@array/array_days"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_15sdp" />
+    <com.example.donatorapp.Utills.MyTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/_10sdp"
+        android:text="Pick The Date:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_11ssp" />
+
+
+    <Spinner
+        android:id="@+id/spinner_Date"
+        style="@style/spinner_style"
+        android:entries="@array/array_Date"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+
+    <com.example.donatorapp.Utills.MyTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/_10sdp"
+        android:text="Pick The Time:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_11ssp" />
+
+    <Spinner
+        android:id="@+id/spinner_time"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:entries="@array/array_time"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"/>
+
+    <com.example.donatorapp.Utills.ButtonBold
+        android:id="@+id/Reserve_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45_height"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_20sdp"
+        android:background="@drawable/shape_login_background"
+        android:gravity="center"
+        android:text="Reserve"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp" />
+
+</LinearLayout>
