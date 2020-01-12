@@ -37,7 +37,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="My Profile"
+                        android:text="@string/my_profile"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/_19ssp" />
 
@@ -114,6 +114,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:src="@drawable/phone_number_icon"
+                            android:contentDescription="TODO"
                             android:tint="@color/colorPrimaryDark" />
 
                         <LinearLayout
@@ -338,6 +339,17 @@
                         android:background="@color/colorPrimaryDark"
                         tools:ignore="Orientation" />
 
+                    <com.example.donatorapp.Utills.MyTextViewBold
+                        android:id="@+id/text_view_log_out"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:background="@drawable/shape_points"
+                        android:padding="@dimen/_7sdp"
+                        android:text="Log Out"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp" />
 
                 </LinearLayout>
             </ScrollView>

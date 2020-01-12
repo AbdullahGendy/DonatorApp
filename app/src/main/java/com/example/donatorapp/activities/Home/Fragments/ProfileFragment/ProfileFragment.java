@@ -1,5 +1,7 @@
 package com.example.donatorapp.activities.Home.Fragments.ProfileFragment;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
@@ -16,6 +18,7 @@ import com.example.donatorapp.Network.NetworkUtil;
 import com.example.donatorapp.R;
 import com.example.donatorapp.Utills.Constant;
 import com.example.donatorapp.Utills.Validation;
+import com.example.donatorapp.activities.Login.LoginActivity;
 
 import java.text.ParseException;
 import java.time.LocalDate;
@@ -32,8 +35,13 @@ import static android.content.Context.MODE_PRIVATE;
 
 
 public class ProfileFragment extends Fragment {
-    private TextView textViewAge, textViewName, textViewDateOfBirth, textViewBloodType, textViewPhoneNumber, textViewAddress;
-    String mAccessToken;
+    private TextView textViewAge;
+    private TextView textViewName;
+    private TextView textViewDateOfBirth;
+    private TextView textViewBloodType;
+    private TextView textViewPhoneNumber;
+    private TextView textViewAddress;
+    private SharedPreferences mSharedPreferences;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,11 +52,24 @@ public class ProfileFragment extends Fragment {
         textViewBloodType = view.findViewById(R.id.text_view_blood_type);
         textViewAddress = view.findViewById(R.id.text_view_address);
         textViewPhoneNumber = view.findViewById(R.id.text_view_phone_number);
+        TextView textViewLogOut = view.findViewById(R.id.text_view_log_out);
+        mSharedPreferences = Objects.requireNonNull(getActivity()).getSharedPreferences("MySharedPreference", MODE_PRIVATE);
 
+        textViewLogOut.setOnClickListener(v -> {
+            @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = mSharedPreferences.edit();
+            editor.putString(Constant.accessToken, "");
+            editor.putString(Constant.notificationToken, "");
+            editor.putBoolean(Constant.rememberMe, false);
+            editor.putString(Constant.logoutNotificationTitle, "");
+            editor.putString(Constant.logoutNotificationBody, "");
+            editor.apply();
+            Objects.requireNonNull(getActivity()).finish();
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            getActivity().startActivity(intent);
+        });
         CompositeSubscription mSubscriptions = new CompositeSubscription();
-        SharedPreferences mSharedPreferences = Objects.requireNonNull(getActivity()).getSharedPreferences("MySharedPreference", MODE_PRIVATE);
-        mAccessToken = mSharedPreferences.getString(Constant.accessToken, "");
-        if (Validation.isConnected(getActivity())) {
+        String mAccessToken = mSharedPreferences.getString(Constant.accessToken, "");
+        if (Validation.isConnected(Objects.requireNonNull(getActivity()))) {
 
             mSubscriptions.add(NetworkUtil.getRetrofitNoHeader()
                     .GetDonatorInfo(mAccessToken)
@@ -65,17 +86,19 @@ public class ProfileFragment extends Fragment {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void handleResponse(DonatorInfoResponse donatorInfoResponse) {
-        textViewDateOfBirth.setText(donatorInfoResponse.getData().getBirthdate().substring(0,10));
+        textViewDateOfBirth.setText(donatorInfoResponse.getData().getBirthdate().substring(0, 10));
         textViewName.setText(donatorInfoResponse.getData().getName());
 
-        textViewAge.setText(calcAge(donatorInfoResponse.getData().getBirthdate().substring(0,10))+" Years");
-        textViewAddress.setText(donatorInfoResponse.getData().getCity()+", Egypt");
+        textViewAge.setText(calcAge(donatorInfoResponse.getData().getBirthdate().substring(0, 10)) + " Years");
+        textViewAddress.setText(donatorInfoResponse.getData().getCity() + ", Egypt");
         textViewPhoneNumber.setText(donatorInfoResponse.getData().getMobileNumber());
         textViewBloodType.setText(donatorInfoResponse.getData().getBloodType());
 
 
     }
+
     private String calcAge(String DateOfBirth) {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -98,6 +121,6 @@ public class ProfileFragment extends Fragment {
             age = Period.between(birthDate, now);
 
             return String.valueOf(age.getYears());
-        } else return String.valueOf(2020 - Integer.valueOf(DateOfBirth.substring(0,4)));
+        } else return String.valueOf(2020 - Integer.valueOf(DateOfBirth.substring(0, 4)));
     }
 }

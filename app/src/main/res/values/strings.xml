@@ -2,7 +2,7 @@
 
     <string name="facebook_app_id" translatable="false">290556735184985</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb290556735184985</string>
-    <string name="app_name">Donator App</string>
+    <string name="app_name">DonatorApp</string>
     <string name="android_task">Android \n Task</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -88,4 +88,5 @@
     <string name="choose_image_method">Choose Image Method</string>
     <string name="take_a_picture">take a picture</string>
     <string name="remember_me">Remember Me</string>
+    <string name="my_profile">My Profile</string>
 </resources>
